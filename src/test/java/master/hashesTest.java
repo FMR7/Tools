@@ -9,14 +9,6 @@ import static org.junit.Assert.*;
  */
 public class hashesTest {
 
-
-    @Test
-    public void fillLeftZeros() throws Exception {
-        String ini = "0123456789";
-        String end = new hashes().fillLeftZeros("123456789", 10);
-        assertEquals(end, ini);
-    }
-
     @Test
     public void getMD5() throws Exception {
         String ini1 = new hashes().getMD5("");

@@ -19,7 +19,7 @@ public class hashes {
         MessageDigest md = MessageDigest.getInstance("MD5");
         md.update(input.getBytes(), 0, input.length());
         String output = new BigInteger(1, md.digest()).toString(16);
-        return fillLeftZeros(output, 32);
+        return new commonMethods().fillLeftZeros(output, 32);
     }
 
     /**
@@ -32,7 +32,7 @@ public class hashes {
         MessageDigest md = MessageDigest.getInstance("SHA-1");
         md.update(input.getBytes(), 0, input.length());
         String output = new BigInteger(1, md.digest()).toString(16);
-        return fillLeftZeros(output, 40);
+        return new commonMethods().fillLeftZeros(output, 40);
     }
 
     /**
@@ -45,7 +45,7 @@ public class hashes {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         md.update(input.getBytes(), 0, input.length());
         String output = new BigInteger(1, md.digest()).toString(16);
-        return fillLeftZeros(output, 64);
+        return new commonMethods().fillLeftZeros(output, 64);
     }
 
     /**
@@ -58,7 +58,7 @@ public class hashes {
         MessageDigest md = MessageDigest.getInstance("SHA-384");
         md.update(input.getBytes(), 0, input.length());
         String output = new BigInteger(1, md.digest()).toString(16);
-        return fillLeftZeros(output, 96);
+        return new commonMethods().fillLeftZeros(output, 96);
     }
 
     /**
@@ -71,25 +71,7 @@ public class hashes {
         MessageDigest md = MessageDigest.getInstance("SHA-512");
         md.update(input.getBytes(), 0, input.length());
         String output = new BigInteger(1, md.digest()).toString(16);
-        return fillLeftZeros(output, 128);
+        return new commonMethods().fillLeftZeros(output, 128);
     }
 
-    /**
-     * Fill a string with zeros by the left
-     * @param input String to fill
-     * @param length String max length
-     * @return The filled string
-     */
-    public String fillLeftZeros(String input, int length){
-        String s = input;
-        while(true) {
-            if (s.length() < length) {
-                s = "0" + s;
-            }else {
-                break;
-            }
-        }
-        return s;
-    }
-
-    }
+}
