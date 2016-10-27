@@ -10,7 +10,7 @@ public class hashesSwitch {
     /**
      *
      * @param passphrase String to hash
-     * @param hashType Hash type: MD5, SHA1, SHA256, SHA384, SHA512
+     * @param hashType Hash types: MD5, SHA1, SHA256, SHA384, SHA512
      * @return Hash string
      * @throws NoSuchAlgorithmException
      */

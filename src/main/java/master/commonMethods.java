@@ -6,7 +6,7 @@ package master;
 public class commonMethods {
 
     /**
-     * Returns a string with the max value for a given number. Ex.: 4 returns "9999"
+     * Returns a string with the max value for a given number. Ex.: 4 returns from "0000" to "9999"
      * @param length Desired string length
      * @return The string
      */

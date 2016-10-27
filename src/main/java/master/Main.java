@@ -9,9 +9,6 @@ public class Main {
         for(int i = 0; i < args.length; i++){
             System.out.println(args[i] + "");
         }
-        System.out.println("RESULT:");
-        //new stringGeneratorNumeric().genFixNumString(3);
-        //new stringGeneratorNumeric().genNumString(2, 3);
     }
 
 }
